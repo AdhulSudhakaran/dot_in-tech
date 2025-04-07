@@ -18,17 +18,3 @@ const App = () => {
 }
 
 export default App
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  header: {
-    flex: 0.2,
-    backgroundColor: AppColors.dark.header_bg
-  },
-  body: {
-    flex: 0.8,
-    backgroundColor: AppColors.dark.bg_color,
-  }
-})
