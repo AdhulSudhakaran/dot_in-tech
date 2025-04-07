@@ -1,8 +1,8 @@
-import { Modal, StatusBar, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
-import { DEVICE_HEIGHT, DEVICE_WIDTH } from '../../utils/CommonHelper'
+import { Modal, StyleSheet, Text, TouchableOpacity } from 'react-native'
 import { useDispatch, useSelector } from 'react-redux'
 import { getFontValue, getThemeData, setFontValue } from '../../slices/AppSlice'
+import { DEVICE_HEIGHT, DEVICE_WIDTH } from '../../utils/CommonHelper'
 
 
 interface Props {

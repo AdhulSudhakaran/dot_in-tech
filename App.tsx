@@ -1,9 +1,7 @@
-import { StatusBar, StyleSheet, Text, useColorScheme, View } from 'react-native'
-import React, { useState } from 'react'
-import AppColors from './src/utils/AppColors'
 import { NavigationContainer } from '@react-navigation/native'
-import AppStackNavigator from './src/AppNavigator'
+import React from 'react'
 import { Provider } from 'react-redux'
+import AppStackNavigator from './src/AppNavigator'
 import store from './src/store/Store'
 
 const App = () => {

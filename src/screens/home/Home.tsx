@@ -1,12 +1,12 @@
+import AsyncStorage from '@react-native-async-storage/async-storage'
 import React, { useState } from 'react'
 import { FlatList, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { useDispatch, useSelector } from 'react-redux'
 import { DarkModeIcon, FontScaleDark, FontScaleWhite, LightModeIcon } from '../../../assets'
 import { getCurrentTheme, getFontValue, getThemeData, setCurrentTheme } from '../../slices/AppSlice'
 import AppColors from '../../utils/AppColors'
-import { DEVICE_HEIGHT, DEVICE_WIDTH } from '../../utils/CommonHelper'
-import AsyncStorage from '@react-native-async-storage/async-storage'
 import { ListDATA } from '../../utils/ArrayDatas'
+import { DEVICE_HEIGHT, DEVICE_WIDTH } from '../../utils/CommonHelper'
 import ScaleModal from './ScaleModal'
 
 
@@ -27,6 +27,7 @@ const Home: React.FC = () => {
             AsyncStorage.setItem('@theme', JSON.stringify('dark'));
         }
     }
+    
 
     const renderItem = ({ item }: any) => {
         return (
@@ -43,8 +44,6 @@ const Home: React.FC = () => {
                     style={styles.image}
                     source={{ uri: item?.image }}
                 />
-
-
             </TouchableOpacity>
         )
     }
@@ -64,9 +63,8 @@ const Home: React.FC = () => {
                         {_theme == 'dark' ? <LightModeIcon /> : <DarkModeIcon />}
                     </TouchableOpacity>
                 </View>
-
-
             </View>
+
             <FlatList
                 data={ListDATA}
                 style={[styles.body, { backgroundColor: color_scheme.bg_color }]}
@@ -83,8 +81,6 @@ const Home: React.FC = () => {
                 isVisible={isScaleModalVisible}
                 closeModal={() => setScaleModalVisible(false)}
             />
-
-
         </View>
     )
 }
